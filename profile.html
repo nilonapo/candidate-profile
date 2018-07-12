@@ -1,0 +1,45 @@
+﻿
+<div class="hpanel hgreen">
+    <div class="panel-body no-borders">
+
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object img-circle m-b m-t-md" src={{Profile.img}} alt="profile image">
+                </a>
+            </div>
+            <div class="media-body" style="padding-top: 50px;">
+                <button class="btn btn-primary btn-lg" type="button"><i class="fa fa-envelope"></i> SEND MESSAGE</button><br /><br />
+                <i ng-class="rate >= i ? 'fas fa-heart fa-2x' : 'far fa-heart fa-2x'" ng-repeat="i in [1, 2, 3, 4, 5]">&nbsp;</i>
+            </div>
+        </div>
+        <h3>
+            <a href="">{{Profile.name}}</a>
+        </h3>
+        <p>
+            {{Profile.Description}}
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <i class="fa fa-thumbs-up"></i> Likes
+            </div>
+            <ul class="list-group no-borders">
+                <li class="list-group-item no-borders" ng-repeat="item in Profile.Likes">{{item}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <i class="fa fa-thumbs-down"></i> Dislikes
+            </div>
+            <ul class="list-group no-borders">
+                <li class="list-group-item no-borders" ng-repeat="item in Profile.Dislikes">{{item}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

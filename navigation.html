@@ -1,0 +1,37 @@
+﻿
+<div id="navigation" ng-controller="navigationController">
+    <div class="profile-picture">
+        
+        <div class="stats-label text-color">
+            <div class="dropdown" uib-dropdown>
+                <a uib-dropdown-toggle href="javascript:;">
+                    <div class="avatar"></div>
+                </a>
+                <ul class="animated flipInX m-t-xs" uib-dropdown-menu>
+                    <li>
+                        <a ui-sref="app_views.contacts">Change Password</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a ui-sref="common.login">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="stats-label text-color">
+            <span class="font-extra-bold font-uppercase">Current User</span>
+        </div>
+        <br />
+
+
+        <ul side-navigation class="nav" id="side-menu">
+            <li ui-sref-active="active">
+                <a ui-sref="content.profile({name: item.name})" class="list-group-item" ng-repeat="item in Profiles" style="text-align: left !important;">
+                    {{item.name}}
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</div>
